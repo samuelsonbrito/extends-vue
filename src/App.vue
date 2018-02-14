@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <sb-a></sb-a>
+    <sb-a ref="a"></sb-a>
     <sb-b></sb-b>
   </div>
 </template>
@@ -17,7 +17,12 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  components: {SbA, SbB}
+  components: {SbA, SbB},
+  methods: {
+    mostrarTitulo(){
+      console.log(this.$refs.a.titulo)
+    }
+  }
 }
 </script>
 
